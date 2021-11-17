@@ -6,4 +6,26 @@
     <string name="home">홈</string>
     <string name="feed">피드</string>
     <string name="my_library">내 서재</string>
+
+    <!-- best_book-->
+    <string name="millie_pick">밀리픽</string>
+    <string name="read_end_percent">완독할 확률 72%</string>
+    <string name="book_title">달러구트 꿈 백화점 2</string>
+    <string name="book_author">이미예(지은이)</string>
+    <string name="book_mark">이 책이 담긴 서재</string>
+    <string name="one_review">한 줄 리뷰</string>
+    <string name="post">포스트</string>
+    <string name="book_mark_count">4.9만 개+</string>
+    <string name="one_review_count">633개</string>
+    <string name="post_count">13개</string>
+    <string name="book_introduce">책 소개</string>
+    <string name="book_introduce_detail">100만 독자를 사로잡은 &lt; 달러구트 꿈 백화점 &gt;,그 두번째 이야기.
+    어느덧 페니가 달러구트 꿈 백화점에서 일한 지도 1년이 넘었다. 재고가 부족한 꿈을 관리하고 꿈값 창고에서 감정으로 가득 찬 병을
+    옮기고, 프런트의 수많은 눈꺼풀 저울을 관리하는 일에 페니는 점점 능숙해진다.</string>
+    <string name="book_library">이 책이 담긴 서재</string>
+    <string name="novel">소설</string>
+    <string name="point">308P</string>
+    <string name="mb">28.6MB</string>
+    <string name="count">2</string>
+
 </resources>

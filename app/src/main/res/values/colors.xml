@@ -23,5 +23,6 @@
     <color name="dark_gray2">#242424</color>
     <color name="millie_black">#000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="back_ground">#f9faf5</color>
 
 </resources>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.BestBookFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_one_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_best_book_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="52dp"
+                    android:src="@drawable/ic_favotire"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_best_book_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintStart_toEndOf="@+id/img_best_book_star"
+                    app:layout_constraintTop_toTopOf="@+id/img_best_book_star" />
+
+                <ImageView
+                    android:id="@+id/img_best_book_setting"
+                    android:layout_width="157dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="102dp"
+                    android:layout_marginEnd="101dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_book_setting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_best_book_star" />
+
+                <TextView
+                    android:id="@+id/text_best_book_millie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="34dp"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/millie_pick"
+                    android:textColor="@color/millie_purple"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/img_best_book_setting"
+                    app:layout_constraintTop_toBottomOf="@+id/img_best_book_setting" />
+
+                <View
+                    android:id="@+id/line_best_book_millie"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@color/light_gray_2"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_best_book_millie"
+                    app:layout_constraintStart_toEndOf="@+id/text_best_book_millie"
+                    app:layout_constraintTop_toTopOf="@+id/text_best_book_millie" />
+
+                <TextView
+                    android:id="@+id/text_best_book_read_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/read_end_percent"
+                    android:textColor="@color/gray_2"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/line_best_book_millie"
+                    app:layout_constraintTop_toTopOf="@+id/text_best_book_millie" />
+
+                <ImageView
+                    android:id="@+id/img_best_book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:src="@drawable/img_detailbook1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_millie"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginEnd="60dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_title"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/millie_black"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/img_best_book"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_author"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_1"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <ImageView
+                    android:id="@+id/img_best_book_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_group"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_author"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="42dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_mark"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_1"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_best_book_mark"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_mark_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_mark_count"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_3"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_mark"
+                    app:layout_constraintStart_toStartOf="@id/text_best_book_mark"
+                    app:layout_constraintEnd_toEndOf="@+id/text_best_book_mark"
+                    android:layout_marginTop="3dp" />
+
+                <View
+                    android:id="@+id/line_best_book_mark"
+                    android:layout_width="1dp"
+                    android:layout_height="42dp"
+                    android:background="@color/light_gray_1"
+                    app:layout_constraintStart_toEndOf="@+id/text_best_book_mark"
+                    app:layout_constraintTop_toTopOf="@+id/img_best_book_mark"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_best_book_mark_count"
+                    android:layout_marginStart="37dp" />
+
+                <ImageView
+                    android:id="@+id/img_best_book_review"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintWidth_percent="0.06"
+                    app:layout_constraintHeight_percent="0.03"
+                    android:src="@drawable/ic_review"
+                    app:layout_constraintTop_toTopOf="@+id/img_best_book_mark"
+                    app:layout_constraintStart_toStartOf="@+id/text_best_book_review"
+                    app:layout_constraintEnd_toEndOf="@+id/text_best_book_review" />
+
+                <TextView
+                    android:id="@+id/text_best_book_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_review"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_1"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toEndOf="@id/line_best_book_mark"
+                    app:layout_constraintTop_toBottomOf="@+id/img_best_book_review"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_review_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_review_count"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_3"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_review"
+                    app:layout_constraintStart_toStartOf="@id/text_best_book_review"
+                    app:layout_constraintEnd_toEndOf="@+id/text_best_book_review"
+                    android:layout_marginTop="3dp" />
+
+                <View
+                    android:id="@+id/line_best_book_review"
+                    android:layout_width="1dp"
+                    android:layout_height="42dp"
+                    android:background="@color/light_gray_1"
+                    app:layout_constraintStart_toEndOf="@+id/text_best_book_review"
+                    app:layout_constraintTop_toTopOf="@+id/img_best_book_review"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_best_book_review_count"
+                    app:layout_constraintEnd_toStartOf="@+id/text_best_book_post"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="35dp" />
+
+                <ImageView
+                    android:id="@+id/img_best_book_post"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintWidth_percent="0.06"
+                    app:layout_constraintHeight_percent="0.03"
+                    android:src="@drawable/ic_post"
+                    app:layout_constraintTop_toTopOf="@+id/img_best_book_review"
+                    app:layout_constraintStart_toStartOf="@+id/text_best_book_post"
+                    app:layout_constraintEnd_toEndOf="@+id/text_best_book_post" />
+
+                <TextView
+                    android:id="@+id/text_best_book_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_1"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toEndOf="@id/line_best_book_review"
+                    app:layout_constraintTop_toBottomOf="@+id/img_best_book_post"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_post_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post_count"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_3"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_post"
+                    app:layout_constraintStart_toStartOf="@id/text_best_book_post"
+                    app:layout_constraintEnd_toEndOf="@+id/text_best_book_post"
+                    android:layout_marginTop="3dp" />
+
+
+                <View
+                    android:id="@+id/line_best_book_one_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/light_gray_1"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_mark_count"
+                    android:layout_marginTop="32dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_introduce"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/millie_black"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/line_best_book_one_page"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginStart="24dp" />
+
+                <TextView
+                    android:id="@+id/text_best_book_introduce_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_introduce_detail"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_3"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_introduce"
+                    app:layout_constraintStart_toStartOf="@+id/text_best_book_introduce"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="21dp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_two_page"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/back_ground"
+                    app:layout_constraintTop_toBottomOf="@+id/text_best_book_introduce_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="21dp">
+
+
+                    <TextView
+                        android:id="@+id/text_best_book_library"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_library"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_2"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="20dp" />
+
+                    <TextView
+                        android:id="@+id/text_best_book_library_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/novel"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:textSize="14sp"
+                        android:textColor="@color/dark_gray2"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@+id/text_best_book_library"
+                        app:layout_constraintStart_toStartOf="@+id/text_best_book_library"
+                        app:layout_constraintEnd_toEndOf="@+id/text_best_book_library"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="24dp" />
+
+                    <View
+                        android:id="@+id/line_best_book_library"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:background="@color/light_gray_1"
+                        app:layout_constraintTop_toTopOf="@+id/text_best_book_library"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_best_book_library"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginStart="37dp" />
+
+                    <TextView
+                        android:id="@+id/text_best_book_one_review_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/one_review"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_2"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toTopOf="@id/text_best_book_library"
+                        app:layout_constraintStart_toEndOf="@+id/line_best_book_library"
+                        android:layout_marginStart="30dp" />
+
+                    <TextView
+                        android:id="@+id/text_best_book_one_review_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/point"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:textSize="14sp"
+                        android:textColor="@color/dark_gray2"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@+id/text_best_book_one_review_title"
+                        app:layout_constraintStart_toStartOf="@+id/text_best_book_one_review_title"
+                        app:layout_constraintEnd_toEndOf="@+id/text_best_book_one_review_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="24dp" />
+
+                    <View
+                        android:id="@+id/line_best_book_one_review"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:background="@color/light_gray_1"
+                        app:layout_constraintTop_toTopOf="@+id/text_best_book_one_review_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_best_book_one_review_title"
+                        app:layout_constraintEnd_toStartOf="@+id/text_best_book_bottom_post"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginStart="35dp" />
+
+
+                    <TextView
+                        android:id="@+id/text_best_book_bottom_post"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/post"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_2"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toTopOf="@id/text_best_book_one_review_title"
+                        app:layout_constraintStart_toEndOf="@+id/line_best_book_one_review"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="33dp"
+                        android:layout_marginEnd="37dp" />
+
+                    <TextView
+                        android:id="@+id/text_best_book_bottom_post_mb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mb"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:textSize="14sp"
+                        android:textColor="@color/dark_gray2"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@+id/text_best_book_bottom_post"
+                        app:layout_constraintStart_toStartOf="@+id/line_best_book_one_review"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="30dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/line_three"
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_two_page"
+                    android:background="@color/light_gray_1" />
+
+                <TextView
+                    android:id="@+id/text_one_review_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_review"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/millie_black"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/line_three"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="24dp" />
+
+                <TextView
+                    android:id="@+id/text_one_review_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/count"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/millie_orange"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="@+id/text_one_review_chat"
+                    app:layout_constraintStart_toEndOf="@+id/text_one_review_chat"
+                    android:layout_marginStart="2dp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_best_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_one_review_chat"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="31dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

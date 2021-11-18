@@ -27,5 +27,15 @@
     <string name="point">308P</string>
     <string name="mb">28.6MB</string>
     <string name="count">2</string>
-
+    <string name="ios">아요짱.</string>
+    <string name="android">안드킹</string>
+    <string name="date">2021.11.05</string>
+    <string name="review">책보면서 먹는 사과가 젤 맛있쪙!</string>
+    <string name="review_2">페니가 성자한 만큼, 저도 성장했습니다!</string>
+    <string name="review_like">이 리뷰가 마음에 드시나요?</string>
+    <string name="best">Best</string>
+    <string name="one_review_hint">한줄리뷰</string>
+    <string name="various_think">다양한 생각을 남겨주세요.</string>
+    <string name="register">등록</string>
+    <string name="one_review_chat_count">0/50</string>
 </resources>

@@ -21,13 +21,23 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
         // Inflate the layout for this fragment
+        initAdapter()
         return binding.root
     }
 
     private fun initAdapter() {
         homeRecyclerAdapter = HomeRecyclerAdapter()
 
-        binding.뷰페이저 연동
+        binding.vpHome.adapter = homeRecyclerAdapter
+
+        homeRecyclerAdapter.pageList.addAll(
+            listOf(
+                HomeData("으악","ㅋㅋ", R.drawable.book1),
+                HomeData("히익","ㅎㅎ", R.drawable.book2)
+            )
+        )
+
+        homeRecyclerAdapter.notifyDataSetChanged()
 
     }
 

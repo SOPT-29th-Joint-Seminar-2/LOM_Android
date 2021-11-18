@@ -31,6 +31,7 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<HomeRecyclerAdapter.HomePageVie
         fun onBind(data: HomeData) {
             binding.tvMajorheading.text = data.majorheading
             binding.tvSubheading.text = data.subheading
+            binding.ivBook.setImageResource(data.intro_image)
         }
     }
 }

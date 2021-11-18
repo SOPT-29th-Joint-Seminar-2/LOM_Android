@@ -9,9 +9,15 @@
         android:id="@+id/tv_majorheading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="200dp"
-        android:text="1"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="29dp"
+        android:text="MahorHeading"
+        android:fontFamily="@font/lato_bold"
+        android:textFontWeight="700"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:lineHeight="30dp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,19 +25,25 @@
         android:id="@+id/tv_subheading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:text="TextView"
+        android:layout_marginStart="23dp"
+        android:text="SubHeading"
+        android:fontFamily="@font/notosanskr_regular"
+        android:textFontWeight="400"
+        android:textStyle="normal"
+        android:textSize="16dp"
+        android:lineHeight="40dp"
+        android:textColor="@color/gray_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_majorheading" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="100dp"
+        android:id="@+id/iv_book"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="27dp"
+        app:layout_constraintDimensionRatio="138:208"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/img_banner1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_subheading"
+        app:srcCompat="@drawable/img_banner_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

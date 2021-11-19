@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/drawable/gradient.xml" value="0.3964102564102564" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/drawable/ic_bell2.xml" value="0.3964102564102564" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/drawable/ic_btn_1.xml" value="0.40260416666666665" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/activity_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_best_book.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_home.xml" value="0.708691499522445" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_item_book_list_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/item_book_list.xml" value="0.5" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/item_view.xml" value="0.27853260869565216" />
+        <entry key="..\:/Users/82109/Desktop/and/Seminar_Lom/LOM_Android/app/src/main/res/drawable/rectangle_fill_gray_border.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/82109/Desktop/and/Seminar_Lom/LOM_Android/app/src/main/res/layout/first_view.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/82109/Desktop/and/Seminar_Lom/LOM_Android/app/src/main/res/layout/fragment_home.xml" value="0.6" />
+        <entry key="..\:/Users/82109/Desktop/and/Seminar_Lom/LOM_Android/app/src/main/res/layout/item_view.xml" value="0.4" />
         <entry key="..\:/Users/kht07/Seminar_2_Android/app/src/main/res/drawable/ic_home_inactive.xml" value="0.14583333333333334" />
         <entry key="..\:/Users/kht07/Seminar_2_Android/app/src/main/res/drawable/rectangle_gray_1_radius_8.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/kht07/Seminar_2_Android/app/src/main/res/drawable/rectangle_lightgray_2.xml" value="0.2324074074074074" />
@@ -17,7 +30,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

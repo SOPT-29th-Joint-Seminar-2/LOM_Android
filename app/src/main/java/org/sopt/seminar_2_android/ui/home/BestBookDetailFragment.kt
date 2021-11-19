@@ -12,7 +12,7 @@ import org.sopt.seminar_2_android.ui.base.BaseFragment
 import org.sopt.seminar_2_android.ui.home.adapter.BestBookRecyclerAdapter
 
 
-class BestBookFragment : BaseFragment<FragmentBestBookBinding>(R.layout.fragment_best_book) {
+class BestBookDetailFragment : BaseFragment<FragmentBestBookBinding>(R.layout.fragment_best_book) {
     private lateinit var bestBookRecyclerAdapter: BestBookRecyclerAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

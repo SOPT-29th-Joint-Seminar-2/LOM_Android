@@ -1,9 +1,10 @@
-package org.sopt.seminar_2_android.ui.home
+package org.sopt.seminar_2_android.ui.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import org.sopt.seminar_2_android.databinding.ItemViewBinding
+import org.sopt.seminar_2_android.ui.home.HomeData
 
 
 class HomeRecyclerAdapter : RecyclerView.Adapter<HomeRecyclerAdapter.HomePageViewHolder>() {
@@ -20,7 +21,7 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<HomeRecyclerAdapter.HomePageVie
         return HomePageViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: HomeRecyclerAdapter.HomePageViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HomePageViewHolder, position: Int) {
         holder.onBind(pageList[position])
     }
 

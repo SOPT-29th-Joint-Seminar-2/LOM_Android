@@ -1,31 +1,37 @@
 package org.sopt.seminar_2_android.ui.home
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayoutMediator
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import org.sopt.seminar_2_android.MainActivity
+import org.sopt.seminar_2_android.MainViewPagerAdapter
 import org.sopt.seminar_2_android.R
 import org.sopt.seminar_2_android.databinding.FragmentHomeBinding
+import org.sopt.seminar_2_android.ui.home.adapter.BookRecyclerAdapter
+import org.sopt.seminar_2_android.ui.home.adapter.HomeRecyclerAdapter
 
 
 class HomeFragment : Fragment() {
     private lateinit var homeRecyclerAdapter: HomeRecyclerAdapter
     private lateinit var binding: FragmentHomeBinding
-
+    private lateinit var bookRecyclerAdapter : BookRecyclerAdapter
+    private lateinit var mainViewPagerAdapter: MainViewPagerAdapter
+    var link = DataToFragment()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
-        // Inflate the layout for this fragment
-        initAdapter()
-        initTransactionEvent()
-
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initAdapter()
+        initBestBookRecycler()
     }
 
     private fun initAdapter() {
@@ -45,9 +51,33 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun initTransactionEvent(){
-        val bestBookFragment = BestBookFragment()
-        childFragmentManager.beginTransaction().add(R.id.container_home, bestBookFragment).commit()
+   private fun initBestBookRecycler(){
+       bookRecyclerAdapter = BookRecyclerAdapter(link)
+       binding.rcHomeBestBook.adapter = bookRecyclerAdapter
+       bookRecyclerAdapter.setBookList(
+           listOf(
+               BookData(R.drawable.book4,"1","거꾸로 읽는 세계","유시민" ),
+               BookData(R.drawable.book2,"2","달러구트 꿈 백화점 2","이미예(지은이)"),
+               BookData(R.drawable.book3,"3","달러구트 꿈 백화점","이미예(지은이)"),
+               BookData(R.drawable.book1,"4","오늘밤, 세계에서 이 사랑이\n사라진다해도","이치조 미사키(지은이),권영주\n(옮긴이)"),
+               BookData(R.drawable.book5,"5","4~7세 보다 중요한 시기는\n없습니다","이임숙"),
+               BookData(R.drawable.book6,"6","다정한 것이 살아남는다","브라이언 헤어·버네사 우즈" )
+
+           )
+       )
+
+   }
+
+    inner class DataToFragment {
+
+        fun getBakeryId(bookId: Int) {
+            if (bookId == 0) {
+              val mainActivity = activity as MainActivity
+                mainActivity.receiveData(0)
+
+            }
+        }
+
     }
 
 

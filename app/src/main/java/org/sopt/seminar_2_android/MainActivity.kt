@@ -1,11 +1,11 @@
 package org.sopt.seminar_2_android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import org.sopt.seminar_2_android.databinding.ActivityMainBinding
-import org.sopt.seminar_2_android.ui.FeedFragment
 import org.sopt.seminar_2_android.ui.base.BaseActivity
+import org.sopt.seminar_2_android.ui.feed.FeedFragment
+import org.sopt.seminar_2_android.ui.home.BestBookDetailFragment
 import org.sopt.seminar_2_android.ui.home.HomeFragment
 import org.sopt.seminar_2_android.ui.mylibrary.MyLibraryFragment
 
@@ -24,6 +24,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         mainViewPagerAdapter.fragments.addAll(fragmentList)
         binding.vpMain.adapter = mainViewPagerAdapter
         binding.vpMain.isUserInputEnabled = false
+
     }
 
 
@@ -54,6 +55,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             }
         }
     }
+
+    fun receiveData(num : Int){
+        if(num== 0){
+            mainViewPagerAdapter.changeFragment(0, BestBookDetailFragment())
+        }
+    }
+
 
     companion object{
         const val HOME_FRAGMENT = 0

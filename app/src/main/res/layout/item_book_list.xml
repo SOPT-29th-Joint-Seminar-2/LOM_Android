@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="21dp">
 
     <ImageView
         android:id="@+id/iv_bestbook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="100dp"
         android:layout_marginStart="51dp"
         android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/book1" />
@@ -22,6 +25,7 @@
         android:layout_marginStart="24dp"
         android:text="1"
         android:fontFamily="@font/notosanskr_bold"
+        android:includeFontPadding="false"
         android:textFontWeight="700"
         android:textStyle="normal"
         android:textSize="20sp"
@@ -38,12 +42,14 @@
         android:layout_marginStart="14dp"
         android:layout_marginEnd="13dp"
         android:text="거꾸로 읽는 세계"
+        android:includeFontPadding="false"
         android:fontFamily="@font/notosanskr_bold"
         android:textFontWeight="700"
         android:textStyle="normal"
         android:textSize="16sp"
         android:lineHeight="15dp"
         android:textColor="@color/black"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_rank"
         app:layout_constraintTop_toTopOf="@+id/tv_rank" />
@@ -59,7 +65,8 @@
         android:textSize="14sp"
         android:lineHeight="15dp"
         android:textColor="@color/gray_1"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_rank"
-        app:layout_constraintStart_toStartOf="@+id/tv_rank"
-        app:layout_constraintTop_toBottomOf="@+id/tv_rank" />
+        android:includeFontPadding="false"
+
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

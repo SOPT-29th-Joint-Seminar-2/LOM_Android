@@ -1,4 +1,4 @@
-package org.sopt.seminar_2_android.ui
+package org.sopt.seminar_2_android.ui.feed
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

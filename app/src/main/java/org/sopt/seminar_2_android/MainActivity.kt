@@ -23,6 +23,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         mainViewPagerAdapter = MainViewPagerAdapter(this)
         mainViewPagerAdapter.fragments.addAll(fragmentList)
         binding.vpMain.adapter = mainViewPagerAdapter
+        binding.vpMain.isUserInputEnabled = false
     }
 
 

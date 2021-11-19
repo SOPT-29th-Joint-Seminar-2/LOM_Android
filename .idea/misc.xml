@@ -5,7 +5,12 @@
       <map>
         <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/drawable/gradient.xml" value="0.3964102564102564" />
         <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/drawable/ic_bell2.xml" value="0.3964102564102564" />
-        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_home.xml" value="1.0" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/drawable/ic_btn_1.xml" value="0.40260416666666665" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/activity_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_best_book.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_home.xml" value="0.708691499522445" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/fragment_item_book_list_fragment.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/item_book_list.xml" value="0.5" />
         <entry key="..\:/Android-lom/LOM_Android/app/src/main/res/layout/item_view.xml" value="0.27853260869565216" />
         <entry key="..\:/Users/82109/Desktop/and/Seminar_Lom/LOM_Android/app/src/main/res/drawable/rectangle_fill_gray_border.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/82109/Desktop/and/Seminar_Lom/LOM_Android/app/src/main/res/layout/first_view.xml" value="0.1793478260869565" />

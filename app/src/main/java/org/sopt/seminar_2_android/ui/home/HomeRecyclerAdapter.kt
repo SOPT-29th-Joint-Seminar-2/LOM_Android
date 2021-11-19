@@ -29,6 +29,7 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<HomeRecyclerAdapter.HomePageVie
     class HomePageViewHolder(private val binding: ItemViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: HomeData) {
+            binding.ivPagebtn.setImageResource(data.pagebtn)
             binding.tvMajorheading.text = data.majorheading
             binding.tvSubheading.text = data.subheading
             binding.ivBook.setImageResource(data.intro_image)

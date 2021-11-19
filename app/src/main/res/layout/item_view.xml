@@ -46,4 +46,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_subheading"
         app:srcCompat="@drawable/img_banner_1" />
+
+    <ImageView
+        android:id="@+id/iv_pagebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_btn_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

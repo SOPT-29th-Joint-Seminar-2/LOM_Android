@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onereviewdata"
+            type="org.sopt.seminar_2_android.data.model.local.OneReviewData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="21dp">
+
+            <ImageView
+                android:id="@+id/img_best_book_profile"
+                android:layout_width="35dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="24dp"
+                android:src="@{onereviewdata.image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_best_book_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:includeFontPadding="false"
+                android:text="@{onereviewdata.name}"
+                android:textColor="@color/gray_3"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_best_book_profile"
+                app:layout_constraintTop_toTopOf="@+id/img_best_book_profile" />
+
+            <TextView
+                android:id="@+id/text_best_book_best"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_medium"
+                android:includeFontPadding="false"
+                android:text="@string/best"
+                android:textColor="@color/millie_orange"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/text_best_book_profile"
+                app:layout_constraintTop_toTopOf="@+id/text_best_book_profile" />
+
+            <TextView
+                android:id="@+id/text_best_book_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:includeFontPadding="false"
+                android:text="@{onereviewdata.date}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/text_best_book_profile"
+                app:layout_constraintTop_toBottomOf="@+id/text_best_book_profile" />
+
+            <TextView
+                android:id="@+id/text_best_book_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:includeFontPadding="false"
+                android:text="@{onereviewdata.review}"
+                android:textColor="@color/gray_3"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/text_best_book_date"
+                app:layout_constraintTop_toBottomOf="@+id/text_best_book_date" />
+
+            <TextView
+                android:id="@+id/text_best_book_review_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/review_like"
+                app:layout_constraintStart_toStartOf="@id/text_best_book_review"
+                app:layout_constraintTop_toBottomOf="@+id/text_best_book_review" />
+
+            <ImageView
+                android:id="@+id/img_best_book_review_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_like"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_best_book_review_like" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

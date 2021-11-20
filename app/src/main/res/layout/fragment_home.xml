@@ -109,6 +109,7 @@
                 android:lineHeight="20dp"
                 android:text="오늘의 책"
                 android:textColor="@color/black"
+                android:includeFontPadding="false"
                 android:textFontWeight="700"
                 android:textSize="20sp"
                 android:textStyle="normal"

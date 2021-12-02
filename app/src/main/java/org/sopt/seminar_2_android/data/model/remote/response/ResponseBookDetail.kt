@@ -32,7 +32,7 @@ data class ResponseBookDetail(
             val contents: String,
             val createdAt: String,
             val id: Int,
-            val likeCount: Int,
+            var likeCount: Int,
             val nickname: String,
             val updatedAt: String,
             val userImg: String

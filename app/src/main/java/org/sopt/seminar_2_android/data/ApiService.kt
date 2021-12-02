@@ -25,4 +25,5 @@ object ApiService {
 
 
     val bookDetailService : BookDetailService = retrofit.create(BookDetailService::class.java)
+
 }

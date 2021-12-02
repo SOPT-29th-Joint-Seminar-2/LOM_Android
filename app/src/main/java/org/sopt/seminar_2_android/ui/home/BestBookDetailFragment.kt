@@ -19,6 +19,7 @@ class BestBookDetailFragment : BaseFragment<FragmentBestBookDetailBinding>(R.lay
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initBestBook()
+        writeReview()
     }
 
 
@@ -30,8 +31,27 @@ class BestBookDetailFragment : BaseFragment<FragmentBestBookDetailBinding>(R.lay
         }
 
 
-       /* bestBookRecyclerAdapter = BestBookRecyclerAdapter()
+       bestBookRecyclerAdapter = BestBookRecyclerAdapter()
         binding.rcBestBook.adapter = bestBookRecyclerAdapter
-        bestBookRecyclerAdapter.setReviewData(oneReviewData)*/
+        homeViewModel.reviewList.observe(viewLifecycleOwner){
+            bestBookRecyclerAdapter.setReviewData(it)
+
+        }
+        bestBookRecyclerAdapter.setItemClickListener(object : BestBookRecyclerAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                homeViewModel.putLikeCount(bestBookRecyclerAdapter.oneReviewData[position].id)
+                homeViewModel.getBookDetail(1)
+            }
+        })
     }
+
+    private fun writeReview(){
+        binding.textOneReivewRegister.setOnClickListener {
+            val text = binding.etOneReviewChat.text.toString()
+            homeViewModel.postReviewWrite(text)
+            homeViewModel.getBookDetail(1)
+        }
+
+    }
+
 }

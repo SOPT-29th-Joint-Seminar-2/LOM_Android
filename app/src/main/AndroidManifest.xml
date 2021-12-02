@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.sopt.seminar_2_android">
 
+
     <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:usesCleartextTraffic="true"

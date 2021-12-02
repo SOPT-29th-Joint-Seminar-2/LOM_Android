@@ -35,5 +35,6 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<HomeRecyclerAdapter.HomePageVie
             binding.tvSubheading.text = data.subheading
             binding.ivBook.setImageResource(data.intro_image)
         }
+
     }
 }

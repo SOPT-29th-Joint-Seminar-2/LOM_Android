@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="bookDetailInfoList"
+            type="org.sopt.seminar_2_android.data.model.remote.response.ResponseBookDetail.Data.BookInfoList" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,7 +87,7 @@
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
-                    android:text="@string/read_end_percent"
+                    intToText="@{bookDetailInfoList.completePercent}"
                     android:textColor="@color/gray_2"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/line_best_book_millie"
@@ -96,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="21dp"
-                    android:src="@drawable/img_detailbook1"
+                    imgBind="@{bookDetailInfoList.bookImg}"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text_best_book_millie"
@@ -107,7 +109,7 @@
                     android:id="@+id/text_best_book_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/book_title"
+                    android:text="@{bookDetailInfoList.bookName}"
                     android:fontFamily="@font/notosanskr_bold"
                     android:textSize="20sp"
                     android:textColor="@color/millie_black"
@@ -121,7 +123,7 @@
                     android:id="@+id/text_best_book_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/book_author"
+                    android:text="@{bookDetailInfoList.author}"
                     android:fontFamily="@font/notosanskr_regular"
                     android:textSize="14sp"
                     android:textColor="@color/gray_1"
@@ -159,7 +161,7 @@
                     android:id="@+id/text_best_book_mark_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/book_mark_count"
+                    android:text="@{bookDetailInfoList.userStorage}"
                     android:fontFamily="@font/notosanskr_medium"
                     android:textSize="14sp"
                     android:textColor="@color/gray_3"
@@ -208,7 +210,7 @@
                     android:id="@+id/text_best_book_review_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/one_review_count"
+                    android:text="@{bookDetailInfoList.userStorage}"
                     android:fontFamily="@font/notosanskr_medium"
                     android:textSize="14sp"
                     android:textColor="@color/gray_3"
@@ -297,7 +299,7 @@
                     android:id="@+id/text_best_book_introduce_detail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/book_introduce_detail"
+                    android:text="@{bookDetailInfoList.description}"
                     android:fontFamily="@font/notosanskr_regular"
                     android:textSize="12sp"
                     android:textColor="@color/gray_3"
@@ -338,7 +340,7 @@
                         android:id="@+id/text_best_book_library_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/novel"
+                        android:text="@{bookDetailInfoList.category}"
                         android:fontFamily="@font/notosanskr_medium"
                         android:textSize="14sp"
                         android:textColor="@color/dark_gray2"
@@ -379,7 +381,7 @@
                         android:id="@+id/text_best_book_one_review_point"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/point"
+                        intToText="@{bookDetailInfoList.reviewPoint}"
                         android:fontFamily="@font/notosanskr_medium"
                         android:textSize="14sp"
                         android:textColor="@color/dark_gray2"
@@ -424,7 +426,7 @@
                         android:id="@+id/text_best_book_bottom_post_mb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/mb"
+                        android:text="@{bookDetailInfoList.postSize}"
                         android:fontFamily="@font/notosanskr_medium"
                         android:textSize="14sp"
                         android:textColor="@color/dark_gray2"

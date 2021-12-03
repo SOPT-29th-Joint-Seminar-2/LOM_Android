@@ -1,5 +1,6 @@
-package org.sopt.seminar_2_android.ui.home
+package org.sopt.seminar_2_android.data.api
 
+import org.sopt.seminar_2_android.data.model.remote.response.ResponseLOMData
 import retrofit2.Call
 import retrofit2.http.*
 

@@ -4,12 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import org.sopt.seminar_2_android.MainViewPagerAdapter
 import org.sopt.seminar_2_android.databinding.ItemBookListBinding
-import org.sopt.seminar_2_android.ui.home.BestBookDetailFragment
-import org.sopt.seminar_2_android.ui.home.BookData
 import org.sopt.seminar_2_android.ui.home.HomeFragment
-import org.sopt.seminar_2_android.ui.home.ResponseLOMData
+import org.sopt.seminar_2_android.data.model.remote.response.ResponseLOMData
 
 class BookRecyclerAdapter(var link: HomeFragment.DataToFragment) : RecyclerView.Adapter<BookRecyclerAdapter.BookViewHolder>(){
     private val _bookList = mutableListOf<ResponseLOMData.Data>()

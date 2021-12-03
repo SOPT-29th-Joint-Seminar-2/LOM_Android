@@ -1,6 +1,8 @@
 package org.sopt.seminar_2_android.ui.home
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
@@ -20,6 +22,7 @@ class BestBookDetailFragment : BaseFragment<FragmentBestBookDetailBinding>(R.lay
         super.onViewCreated(view, savedInstanceState)
         initBestBook()
         writeReview()
+        countText()
     }
 
 
@@ -50,7 +53,26 @@ class BestBookDetailFragment : BaseFragment<FragmentBestBookDetailBinding>(R.lay
             val text = binding.etOneReviewChat.text.toString()
             homeViewModel.postReviewWrite(text)
             homeViewModel.getBookDetail(1)
+
+            binding.etOneReviewChat.text.clear()
         }
+    }
+
+    private fun countText(){
+        binding.etOneReviewChat.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                binding.textOneReviewChatCount.text = p0?.length.toString()+"/50"
+            }
+        })
+
 
     }
 

@@ -1,4 +1,4 @@
-package org.sopt.seminar_2_android.ui.home
+package org.sopt.seminar_2_android.data.model.remote.response
 
 data class ResponseLOMData(
     val status: Int,

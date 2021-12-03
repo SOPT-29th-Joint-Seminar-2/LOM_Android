@@ -4,6 +4,7 @@ import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.sopt.seminar_2_android.data.api.BookDetailService
+import org.sopt.seminar_2_android.data.api.LOMService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -25,5 +26,5 @@ object ApiService {
 
 
     val bookDetailService : BookDetailService = retrofit.create(BookDetailService::class.java)
-
+    val apiService: LOMService = retrofit.create(LOMService::class.java)
 }

@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentActivity
 import org.sopt.seminar_2_android.MainActivity
 import org.sopt.seminar_2_android.MainViewPagerAdapter
 import org.sopt.seminar_2_android.R
+import org.sopt.seminar_2_android.data.ApiService
 import org.sopt.seminar_2_android.databinding.FragmentHomeBinding
 import org.sopt.seminar_2_android.ui.home.adapter.BookRecyclerAdapter
 import org.sopt.seminar_2_android.ui.home.adapter.HomeRecyclerAdapter
@@ -63,7 +64,7 @@ class HomeFragment : Fragment() {
 
     private fun initNetwork(){
 
-        val call = ServiceCreator.apiService.getInfo()
+        val call = ApiService.apiService.getInfo()
 
         call.enqueueUtil(
             onSuccess = {
